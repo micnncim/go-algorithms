@@ -11,10 +11,10 @@ type Queue struct {
 }
 
 func New() *Queue {
-	q := new(Queue)
-	q.values = make([]interface{}, 0)
-	q.mu = new(sync.Mutex)
-	return q
+	return &Queue{
+		values: make([]interface{}, 0),
+		mu:     new(sync.Mutex),
+	}
 }
 
 func (q *Queue) Size() int {
