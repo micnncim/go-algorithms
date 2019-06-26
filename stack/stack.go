@@ -11,10 +11,10 @@ type Stack struct {
 }
 
 func New() *Stack {
-	s := new(Stack)
-	s.values = make([]interface{}, 0)
-	s.mu = new(sync.Mutex)
-	return s
+	return &Stack{
+		values: make([]interface{}, 0),
+		mu:     new(sync.Mutex),
+	}
 }
 
 func (s *Stack) Size() int {
