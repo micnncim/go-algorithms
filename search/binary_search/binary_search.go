@@ -4,6 +4,7 @@ const (
 	NotFound = -1
 )
 
+// a is sorted slice.
 func Search(a []int, want int) int {
 	left, right := 0, len(a)
 
