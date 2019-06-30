@@ -1,4 +1,4 @@
-package binary_tree
+package binary_search_tree
 
 import (
 	"testing"
@@ -37,8 +37,8 @@ func TestTraversePreOrder(t *testing.T) {
 	for _, tc := range cases {
 		t.Run(tc.name, func(t *testing.T) {
 			var got []int
-			TraversePreOrder(tc.n, func(v interface{}) {
-				got = append(got, v.(int))
+			TraversePreOrder(tc.n, func(v int) {
+				got = append(got, v)
 			})
 			assert.Equal(t, tc.want, got)
 		})
@@ -76,8 +76,8 @@ func TestTraverseInOrder(t *testing.T) {
 	for _, tc := range cases {
 		t.Run(tc.name, func(t *testing.T) {
 			var got []int
-			TraverseInOrder(tc.n, func(v interface{}) {
-				got = append(got, v.(int))
+			TraverseInOrder(tc.n, func(v int) {
+				got = append(got, v)
 			})
 			assert.Equal(t, tc.want, got)
 		})
@@ -115,8 +115,8 @@ func TestTraversePostOrder(t *testing.T) {
 	for _, tc := range cases {
 		t.Run(tc.name, func(t *testing.T) {
 			var got []int
-			TraversePostOrder(tc.n, func(v interface{}) {
-				got = append(got, v.(int))
+			TraversePostOrder(tc.n, func(v int) {
+				got = append(got, v)
 			})
 			assert.Equal(t, tc.want, got)
 		})

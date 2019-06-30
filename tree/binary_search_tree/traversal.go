@@ -1,6 +1,6 @@
-package binary_tree
+package binary_search_tree
 
-func TraversePreOrder(n *Node, f func(interface{})) {
+func TraversePreOrder(n *Node, f func(int)) {
 	if n == nil {
 		return
 	}
@@ -9,7 +9,7 @@ func TraversePreOrder(n *Node, f func(interface{})) {
 	TraversePreOrder(n.right, f)
 }
 
-func TraverseInOrder(n *Node, f func(interface{})) {
+func TraverseInOrder(n *Node, f func(int)) {
 	if n == nil {
 		return
 	}
@@ -18,7 +18,7 @@ func TraverseInOrder(n *Node, f func(interface{})) {
 	TraverseInOrder(n.right, f)
 }
 
-func TraversePostOrder(n *Node, f func(interface{})) {
+func TraversePostOrder(n *Node, f func(int)) {
 	if n == nil {
 		return
 	}
