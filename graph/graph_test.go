@@ -19,15 +19,15 @@ func TestGraph(t *testing.T) {
 		{0, 0, 0, 1, 0, 0},
 	}
 
-	list := matrixToList(matrix)
+	list := MatrixToList(matrix)
 	for i, node := range list {
 		fmt.Printf("%d: ", i+1)
-		for k := range node.adjacent {
+		for k := range node.Neighbors {
 			fmt.Printf("%d ", k+1)
 		}
 		fmt.Println()
 	}
-	got := listToMatrix(list)
+	got := ListToMatrix(list)
 
 	assert.Equal(t, matrix, got)
 }
